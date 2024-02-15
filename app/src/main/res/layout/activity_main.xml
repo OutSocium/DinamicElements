@@ -9,12 +9,12 @@
 
     <LinearLayout
         android:id="@+id/mainlayout"
-        android:layout_width="418dp"
-        android:layout_height="87dp"
+        android:layout_width="397dp"
+        android:layout_height="55dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-1dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="3dp">
 
         <CheckBox
             android:id="@+id/enlayer1"
@@ -29,17 +29,48 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="CheckBox" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="392dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/material_dynamic_primary95"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainlayout" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/master"
         android:layout_width="311dp"
         android:layout_height="137dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:background="#A32C2C"
+        android:layout_marginStart="28dp"
+        android:background="@color/material_dynamic_primary95"
         android:gravity="left"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainlayout"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
