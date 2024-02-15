@@ -2,6 +2,7 @@ package com.example.dinamicelements;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -54,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
     public void addButton (LinearLayout mainLayer){
        Button newBtn =  new Button (this);
        newBtn.setText("New Button");
+       newBtn.setId(122);
+       newBtn.setOnClickListener(new View.OnClickListener() {
+           @SuppressLint("ResourceType")
+           @Override
+           public void onClick(View v) {
+               TextView text1 = findViewById(R.id.textView);
+               text1.setText( String.valueOf( newBtn.getId() ));
+           }
+       });
        mainLayer.addView(newBtn);
 
     }
