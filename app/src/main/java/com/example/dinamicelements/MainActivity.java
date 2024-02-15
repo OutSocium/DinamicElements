@@ -44,6 +44,17 @@ public class MainActivity extends AppCompatActivity {
        });
 
        Button btn = (Button) findViewById(R.id.button2);
+       btn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               addButton( mainLayer);
+           }
+       });
+    }
+    public void addButton (LinearLayout mainLayer){
+       Button newBtn =  new Button (this);
+       newBtn.setText("New Button");
+       mainLayer.addView(newBtn);
 
     }
 }
